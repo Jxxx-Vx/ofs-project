@@ -16,4 +16,5 @@ echo "Execute database migrations."
 python manage.py migrate
 
 # Start server
-uwsgi --socket :8000 --master --enable-threads --module project_settings.wsgi
+python manage.py runserver 0.0.0.0:8000
+# uwsgi --socket :8000 --master --enable-threads --module project_settings.wsgi
