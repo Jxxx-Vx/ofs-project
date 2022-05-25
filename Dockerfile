@@ -15,6 +15,9 @@ COPY ./project_root /project_root
 WORKDIR /project_root
 COPY ./scripts /scripts
 
+RUN sed -i 's/\r$//' /scripts/entrypoint.sh && chmod +x /scripts/entrypoint.sh
+
+
 RUN chmod +x /scripts/*
 
 RUN mkdir -p /vol/web/media
